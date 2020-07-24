@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <title>Mao Eyelashes</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <script src="script/jquery-1.7.1.min.js"> </script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<header>
+<div class="lashmeup">
+  <div class="container">
+    <div class="header__inner">
+  	<img  src="img/mao-logo-1.svg" alt="Mao Eyelashes Logo">
+    <div class="ham" onclick="showFunction()">
+      <div class="ham__btn"></div>
+      <div class="js__menu" id="dropDown">
+          <div class="js__menu-bg">
+          <div class="js__menu-inner">
+              <a href="index.html">HOME</a>
+          </div>
+          <div class="js__menu-inner">
+            <a href="lmu.html">LASH ME UP</a>
+        </div>
+        <div class="js__menu-inner">
+              <a href="guide.html">GUIDE</a>
+          </div>
+          <div class="js__menu-inner">
+              <a href="ads.html">ADS</a>
+          </div>
+          <div class="js__menu-inner">
+              <a href="about.html">ABOUT</a>
+          </div>
+      </div>
+  </div>
+  </div>
+  <nav class="nav">
+  	<a href="index.html">HOME</a>
+    <a href="lmu.html">LASH ME UP</a>
+    <a href="guide.html">GUIDE</a>
+    <a href="ads.html">ADS</a>
+    <a href="about.html">ABOUT</a>
+  </nav>
+</div>
+</div>
+</header>
+
+<body>
+
+<section class="hero">
+    <img src="img/lmu-hero.png" alt="Customisable Eyelash Builder">
+</section>
+
+<section>
+ <div id="configuratorbox">
+
+        <img id="face" src="config-img/face.png">
+
+        <!--band thickness-->
+        <img id="thin" src="config-img/thin-new.png">
+        <img id="natural" src="config-img/natural-new.png">
+        <img id="thick" src="config-img/thick-new.png">
+
+        <!--lash length-->
+        <img id="short" src="config-img/short-new.png">
+        <img id="medium" src="config-img/medium-new.png">
+        <img id="long" src="config-img/long-new.png">
+
+        <!--density-->
+        <img id="light" src="config-img/light-new.png">
+        <img id="wispy" src="config-img/wispy-new.png">
+        <img id="heavy" src="config-img/heavy-new.png">
+
+        <!--images on face-->
+        <img id="fthin" class="face" src="config-img/thin-new.png">
+        <img id="fnatural" class="face" src="config-img/natural-new.png">
+        <img id="fthick" class="face" src="config-img/thick-new.png">
+
+        <img id="fshort" class="face" src="config-img/short-new.png">
+        <img id="fmedium" class="face" src="config-img/medium-new.png">
+        <img id="flong" class="face" src="config-img/long-new.png">
+
+        <img id="flight" class="face" src="config-img/light-new.png">
+        <img id="fwispy" class="face" src="config-img/wispy-new.png">
+        <img id="fheavy" class="face" src="config-img/heavy-new.png">
+
+        <!--main buttons-->
+        <button id="butt_1">Band<br>Thickness</button>
+            <button id="butt_2">Lash Length</button>
+            <button id="butt_3">Density</button>
+
+            <!--option buttons-->
+            <button id="butt_4">Thin</button>
+            <button id="butt_5">Natural</button>
+            <button id="butt_6">Thick</button>
+
+            <button id="butt_7">Short</button>
+            <button id="butt_8">Medium</button>
+            <button id="butt_9">Long</button>
+
+            <button id="butt_10">Light</button>
+            <button id="butt_11">Wispy</button>
+            <button id="butt_12">Heavy</button>
+
+            <!--other buttons-->
+            <img id="replay" src="config-img/replay.png">
+            <button id="cta">ADD TO BAG</button>
+
+        </div>
+
+
+        <script type="text/javascript">
+
+        //on launch
+        $( "#face" ).show();
+            $( "#thin" ).hide(); 
+            $( "#natural" ).hide();
+            $( "#thick" ).hide();
+            $( "#butt_4" ).hide();
+            $( "#butt_5" ).hide();
+            $( "#butt_6" ).hide();
+            $( "#fthin" ).hide(); 
+            $( "#fnatural" ).hide();
+            $( "#fthick" ).hide();
+            $( "#fshort" ).hide(); 
+            $( "#fmedium" ).hide();
+            $( "#flong" ).hide();
+            $( "#butt_7" ).hide();
+            $( "#butt_8" ).hide();
+            $( "#butt_9" ).hide();
+            $( "#short" ).hide(); 
+            $( "#medium" ).hide();
+            $( "#long" ).hide();
+            $( "#flight" ).hide(); 
+            $( "#fwispy" ).hide();
+            $( "#fheavy" ).hide();
+            $( "#butt_10" ).hide();
+            $( "#butt_11" ).hide();
+            $( "#butt_12" ).hide();
+            $( "#light" ).hide(); 
+            $( "#wispy" ).hide();
+            $( "#heavy" ).hide();
+
+
+
+
+            //click band thickness
+            $( "#butt_1" ).click(function() {
+              $( "#thin" ).show();
+              $( "#natural" ).show();
+              $( "#thick" ).show();
+              $( "#butt_4" ).show();
+              $( "#butt_5" ).show();
+              $( "#butt_6" ).show();
+              $( "#short" ).hide();
+              $( "#medium" ).hide();
+              $( "#long" ).hide();
+              $( "#butt_7" ).hide();
+              $( "#butt_8" ).hide();
+              $( "#butt_9" ).hide();
+              $( "#butt_10" ).hide();
+              $( "#butt_11" ).hide();
+              $( "#butt_12" ).hide();
+              $( "#light" ).hide(); 
+              $( "#wispy" ).hide();
+              $( "#heavy" ).hide();
+
+
+            });
+
+
+            //click thin
+            $( "#butt_4" ).click(function() {
+              $( "#fthin" ).show();
+              $( "#fnatural" ).hide();
+              $( "#fthick" ).hide();
+
+              });
+
+            //click natural
+            $( "#butt_5" ).click(function() {
+              $( "#fnatural" ).show();
+              $( "#fthin" ).hide();
+              $( "#fthick" ).hide();
+
+              });
+
+            //click thick
+            $( "#butt_6" ).click(function() {
+              $( "#fthick" ).show();
+              $( "#fthin" ).hide();
+              $( "#fnatural" ).hide();
+
+              });
+
+
+
+            //click lash length
+            $( "#butt_2" ).click(function() {
+              $( "#short" ).show();
+              $( "#medium" ).show();
+              $( "#long" ).show();
+              $( "#butt_7" ).show();
+              $( "#butt_8" ).show();
+              $( "#butt_9" ).show();
+              $( "#thin" ).hide();
+              $( "#natural" ).hide();
+              $( "#thick" ).hide();
+              $( "#butt_4" ).hide();
+              $( "#butt_5" ).hide();
+              $( "#butt_6" ).hide();
+              $( "#butt_10" ).hide();
+              $( "#butt_11" ).hide();
+              $( "#butt_12" ).hide();
+              $( "#light" ).hide(); 
+              $( "#wispy" ).hide();
+              $( "#heavy" ).hide();
+
+            });
+
+            //click short
+            $( "#butt_7" ).click(function() {
+              $( "#fshort" ).show();
+              $( "#fmedium" ).hide();
+              $( "#flong" ).hide();
+
+              });
+
+            //click medium
+            $( "#butt_8" ).click(function() {
+              $( "#fmedium" ).show();
+              $( "#fshort" ).hide();
+              $( "#flong" ).hide();
+
+              });
+
+            //click long
+            $( "#butt_9" ).click(function() {
+              $( "#flong" ).show();
+              $( "#fshort" ).hide();
+              $( "#fmedium" ).hide();
+
+              });
+
+            //click density
+            $( "#butt_3" ).click(function() {
+              $( "#light" ).show();
+              $( "#wispy" ).show();
+              $( "#heavy" ).show();
+              $( "#butt_10" ).show();
+              $( "#butt_11" ).show();
+              $( "#butt_12" ).show();
+              $( "#thin" ).hide();
+              $( "#natural" ).hide();
+              $( "#thick" ).hide();
+              $( "#butt_4" ).hide();
+              $( "#butt_5" ).hide();
+              $( "#butt_6" ).hide();
+              $( "#short" ).hide();
+              $( "#medium" ).hide();
+              $( "#long" ).hide()
+              $( "#butt_7" ).hide();
+              $( "#butt_8" ).hide();
+              $( "#butt_9" ).hide();
+
+            });
+
+            //click light
+            $( "#butt_10" ).click(function() {
+              $( "#flight" ).show();
+              $( "#fwispy" ).hide();
+              $( "#fheavy" ).hide();
+
+            });
+
+            //click wispy
+            $( "#butt_11" ).click(function() {
+              $( "#fwispy" ).show();
+              $( "#flight" ).hide();
+              $( "#fheavy" ).hide();
+
+            });
+
+            $( "#butt_12" ).click(function() {
+              $( "#fheavy" ).show();
+              $( "#fwispy" ).hide();
+              $( "#flight" ).hide();
+
+            });
+
+            //click replay
+            $( "#replay" ).click(function() {
+          $( "#face" ).show();
+              $( "#thin" ).hide(); 
+              $( "#natural" ).hide();
+              $( "#thick" ).hide();
+              $( "#butt_4" ).hide();
+              $( "#butt_5" ).hide();
+              $( "#butt_6" ).hide();
+              $( "#fthin" ).hide(); 
+              $( "#fnatural" ).hide();
+              $( "#fthick" ).hide();
+              $( "#fshort" ).hide(); 
+              $( "#fmedium" ).hide();
+              $( "#flong" ).hide();
+              $( "#butt_7" ).hide();
+              $( "#butt_8" ).hide();
+              $( "#butt_9" ).hide();
+              $( "#short" ).hide(); 
+              $( "#medium" ).hide();
+              $( "#long" ).hide();
+              $( "#flight" ).hide(); 
+              $( "#fwispy" ).hide();
+              $( "#fheavy" ).hide();
+              $( "#butt_10" ).hide();
+              $( "#butt_11" ).hide();
+              $( "#butt_12" ).hide();
+              $( "#light" ).hide(); 
+              $( "#wispy" ).hide();
+              $( "#heavy" ).hide();
+
+          });
+
+
+            </script>
+    </section>
+
+  
+<footer class="centered">
+  &copy; 2020 Mao Eyelashes
+</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
